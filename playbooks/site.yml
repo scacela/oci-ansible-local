@@ -1,0 +1,11 @@
+---
+  - name: "Ansible Demo"
+    hosts: localhost
+    connection: local 
+    tasks:
+
+    - name: "Execute a ls -lrt1 command"
+      shell: "ls -lrt1"
+      register: "output"
+
+    - debug: var=output.stdout_lines
